@@ -222,3 +222,12 @@ section {
     .navbar ul li a { font-size: 18px; } /* bigger text */
     .navbar { padding: 15px 20px; }
 }
+
+.hero-text h1 {
+    font-size: 48px !important;
+}
+@media screen and (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 36px !important;
+    }
+}
