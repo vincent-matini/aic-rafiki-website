@@ -210,3 +210,15 @@ section {
     .hero-top { flex-direction: column; text-align: center; gap: 20px; }
     .hero-logo img { max-width: 180px; }
 }
+
+/* Mobile navbar adjustments */
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .navbar ul li:last-child { margin-left: 0; }
+    .navbar ul li a { font-size: 18px; } /* bigger text */
+    .navbar { padding: 15px 20px; }
+}
