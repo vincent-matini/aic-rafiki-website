@@ -205,31 +205,8 @@ section {
     padding: 12px 25px;
 }
 
-/* Media query for small screens (phones) */
-@media screen and (max-width: 480px) {
-    /* Hero section content enlarged */
-    .hero-text h1 {
-        font-size: 36px; /* bigger than normal text for readability */
-    }
-    .hero-text p {
-        font-size: 20px; /* larger paragraph */
-    }
-
-    /* Buttons larger */
-    .btn-primary, .btn-secondary {
-        font-size: 18px;
-        padding: 14px 30px;
-    }
-
-    /* Hero container spacing */
-    .hero-top {
-        flex-direction: column; /* logo above text */
-        text-align: center;
-        gap: 20px;
-    }
-
-    /* Logo size larger for mobile */
-    .hero-logo img {
-        max-width: 180px;
-    }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero-top { flex-direction: column; text-align: center; gap: 20px; }
+    .hero-logo img { max-width: 180px; }
 }
