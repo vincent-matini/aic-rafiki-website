@@ -186,3 +186,50 @@ section {
         font-size: 36px;
     }
 }
+
+/* Default: Desktop / Large screens */
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Buttons stay the same */
+.btn-primary, .btn-secondary {
+    font-size: 16px;
+    padding: 12px 25px;
+}
+
+/* Media query for small screens (phones) */
+@media screen and (max-width: 480px) {
+    /* Hero section content enlarged */
+    .hero-text h1 {
+        font-size: 36px; /* bigger than normal text for readability */
+    }
+    .hero-text p {
+        font-size: 20px; /* larger paragraph */
+    }
+
+    /* Buttons larger */
+    .btn-primary, .btn-secondary {
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+
+    /* Hero container spacing */
+    .hero-top {
+        flex-direction: column; /* logo above text */
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Logo size larger for mobile */
+    .hero-logo img {
+        max-width: 180px;
+    }
+}
