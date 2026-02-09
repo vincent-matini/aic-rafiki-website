@@ -1,0 +1,188 @@
+/* Navbar container */
+.navbar {
+    background-color: #333; /* dark background */
+    padding: 10px 20px;
+    position: sticky; /* sticks to top when scrolling */
+    top: 0;
+    z-index: 1000; /* stays above other content */
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* items aligned left */
+    gap: 30px; /* space between links */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar links */
+.navbar ul li a {
+    color: #fff; /* white text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+    color: #ff9900; /* accent color on hover */
+}
+
+/* Optional: make navbar items right-aligned (split) */
+.navbar ul li:last-child {
+    margin-left: auto; /* pushes last item (Contact) to the right */
+}
+
+
+/* Reset default margins and make the page fill the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* prevent horizontal scroll */
+    padding: 0px;
+}
+
+/* Body as a flex container to push footer down */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content grows to take available space */
+main {
+    flex: 1;
+    padding: 0px; /* Optional spacing inside main content */
+}
+
+/* Footer styles */
+footer {
+    background-color: #f2f2f2; /* light gray background */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #333; /* dark text */
+    border-top: 1px solid #ccc; /* optional subtle border */
+}
+
+section {
+    padding: 0px; /* top/bottom and sides */
+    width: 100%;
+    margin: 0 auto; /* center align */
+    box-sizing: border-box; /* important to prevent overflow */
+    padding: 10px 10px; /* optional, only internal spacing */
+}
+
+#hero {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#about {
+    background-color: #fff;
+}
+
+#services {
+    background-color: #f2f2f2;
+}
+
+#contact {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* stack links vertically */
+        gap: 10px;
+    }
+    .navbar ul li:last-child {
+        margin-left: 0; /* remove split on mobile */
+    }
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: url('images/kit.jpg') center/cover no-repeat;
+    color: #fff; /* keep text readable */
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Container for everything inside hero */
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* space between top row and buttons */
+}
+
+/* Top row: logo left, text right */
+.hero-top {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Logo */
+.hero-logo img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px; /* optional */
+}
+
+/* Text */
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Buttons row: centered */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Buttons style */
+.btn-primary, .btn-secondary {
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary { background-color: #ff9900; color: #fff; }
+.btn-primary:hover { background-color: #e68a00; }
+.btn-secondary { background-color: transparent; border: 2px solid #fff; color: #fff; }
+.btn-secondary:hover { background-color: #fff; color: #333; }
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .hero-top {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-logo img {
+        max-width: 150px;
+    }
+    .hero-text h1 {
+        font-size: 36px;
+    }
+}
