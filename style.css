@@ -50,6 +50,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    background-color: #450063;
 }
 
 /* Main content grows to take available space */
@@ -230,4 +231,33 @@ section {
     .hero-text h2 {
         font-size: 36px !important;
     }
+}
+
+/*.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+*/
+
+.card-container {
+  display: flex;
+  flex-direction: row;   /* left to right */
+  gap: 16px;             /* space between cards */
+  flex-wrap: wrap;       /* allows next row if screen is small */
+}
+
+.card {
+  width: 200px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }

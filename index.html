@@ -1,82 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIC Rafiki Splash</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Splash full screen */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .splash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    background: linear-gradient(135deg, #4facfe, #00f2fe); /* Amazing gradient */
+    color: white;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .splash h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: slideIn 1.5s ease-out;
+  }
+
+  .splash p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    opacity: 0.85;
+    animation: fadeUp 2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 0.85; }
+  }
+</style>
+</head>
 <body>
-    <head>
-        
-        <nav class="navbar">
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#ministry">Our Ministries</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>           
-        
-    </head>
-    
 
+<div class="splash">
+  <h1>We are glad to have you!</h1>
+  <p>Welcome to <strong>AIC Rafiki, Nakuru Kenya</strong></p>
+</div>
 
-<main>
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <!-- Top row: logo and text -->
-            <div class="hero-top">
-                <div class="hero-logo">
-                    <img src="images/church-logo.png" alt="AIC Rafiki Nakuru Logo">
-                </div>
-            <div class="hero-text">
-                <h1>Welcome to AIC Rafiki Nakuru, Kenya</h1>
-                <p>
-                    Join our community of faith, worship, and service. We are dedicated to spreading the Word of God
-                    and serving our community with love and compassion.
-                </p>
-            </div>
-        </div>
+<script>
+  // Step: Auto redirect to home.html after 3 seconds
+  setTimeout(() => {
+    // Fade out effect
+    document.querySelector('.splash').style.transition = "opacity 1s";
+    document.querySelector('.splash').style.opacity = 0;
 
-        <!-- Bottom row: buttons centered -->
-        <div class="hero-buttons">
-            <a href="#about" class="btn-primary">Learn More</a>
-            <a href="#contact" class="btn-secondary">Get in Touch</a>
-        </div>
-    </div>
-</section>
+    // Wait 1s for fade out, then go to homepage
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 1000);
+  }, 3000); // 3 seconds splash
+</script>
 
-
-
-
-    <section id="ministry">
-        <h2>Our Ministries</h2>
-        <p>Our church is committed to faith, love, and community.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Sunday Worship</li>
-            <li>Bible Study</li>
-            <li>Community Outreach</li>
-        </ul>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Our church is committed to faith, love, and community.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@christfellowship.org</p>
-        <p>Phone: +254 700 000 000</p>
-    </section>
-    
-</main>
-
-<footer>
-  &copy; 2026 AIC Rafiki Nakuru Kenya. All Rights Reserved.
-</footer>
-
-
-</body>    
+</body>
 </html>
